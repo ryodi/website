@@ -1,0 +1,47 @@
+#!/usr/bin/perl
+
+use warnings;
+use strict;
+
+use Verse qw/verse/;
+use Verse::Theme;
+use File::Find;
+use List::Util qw/max/;
+
+dir "{site}";
+copy "{theme}/assets/*"   if exist "{theme}/assets";
+copy "{root}/static/*"    if exist "{root}/static";
+
+for my $page (page->read_all) {
+	render $page,
+		using => $page->attrs->{template} || "page.tt",
+		at    => "{site}{permalink}";
+}
+
+my @all = reverse
+	sort { ($a->{__dated} || 0) cmp ($b->{__dated} || 0) }
+	grep { !$_->attrs->{draft} } blog->read_all;
+$_->{timestamp} = $_->{__dated} || 0 for @all;
+
+my @featured   = grep { $_->attrs->{featured} and !$_->attrs->{private} } @all;
+my @syndicated = grep { !$_->attrs->{private}                           } @all;
+
+my $latest = max map { $_->{timestamp} || 0 } @syndicated;
+render { articles => [@syndicated], latest => $latest },
+	using  => "rss.tt",
+	layout => "rss.tt",
+	at     => "{site}/feed.xml";
+
+my $styles = [map { ($_, "w $_") } split //, 'damn'];
+render { x => $styles, articles => [@featured] },
+	using => "main.tt",
+	at    => "{site}/index.html";
+
+dir "{site}/blog";
+for my $post (@all) {
+	render $post,
+		using => "article.tt",
+		at    => "{site}/blog/{permalink}.html";
+}
+
+1;

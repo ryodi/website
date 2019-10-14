@@ -1,0 +1,91 @@
+<div class="band b header">
+  <div><img class="logo" src="/i/logo.png"></div>
+  <div><img class="header" src="/i/header.png"></div>
+</div>
+
+[% for l in x %]
+<div class="sp sp3"></div>
+<div class="band [% l %]">
+  <div>
+     <h1>Lorem Ipsum Dolor Sit Amet</h1>
+
+     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+     eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+     minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+     ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+     voluptate.</p>
+  </div>
+  <div class="mt"></div>
+</div>
+<div class="sp sp1"></div>
+<div class="band [% l %]">
+  <div>
+     <h1>Lorem Ipsum Dolor Sit Amet</h1>
+
+     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+     eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+     minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+     ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+     voluptate.</p>
+  </div>
+
+  <div>
+    <img src="/i/screenshot.png">
+  </div>
+</div>
+<div class="band [% l %]">
+  <div>
+     <h1>Lorem Ipsum Dolor Sit Amet</h1>
+
+     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+     eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+     minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+     ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+     voluptate.</p>
+  </div>
+  <div class="mt"></div>
+</div>
+<div class="band [% l %] x">
+  <div>
+     <h1>Lorem Ipsum Dolor Sit Amet</h1>
+
+     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+     eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+     minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+     ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+     voluptate.</p>
+  </div>
+
+  <div>
+    <pre><code>[run] mkdir -p /Users/jhunt/code/web/ryodi.com/htdocs
+[run] cp -a /Users/jhunt/code/web/ryodi.com/./theme/ryodi/assets/*
+/Users/jhunt/code/web/ryodi.com/htdocs
+[render] page.tt :: /Users/jhunt/code/web/ryodi.com/htdocs/about
+[render] rss.tt :: /Users/jhunt/code/web/ryodi.com/htdocs/feed.xml
+[render] main.tt :: /Users/jhunt/code/web/ryodi.com/htdocs/index.html
+[run] mkdir -p /Users/jhunt/code/web/ryodi.com/htdocs/blog
+[render] article.tt ::
+/Users/jhunt/code/web/ryodi.com/htdocs/blog/first-post.html
+
+$ ls
+total 8
+-rw-r--r-- 1 jhunt staff 184 Mar 23 18:15 Makefile
+drwxr-xr-x 4 jhunt staff 128 Mar 23 16:17 data
+drwxr-xr-x 8 jhunt staff 256 Aug 17 19:52 htdocs
+-rw-r--r-- 1 jhunt staff 416 Mar 23 18:19 site.yml
+drwxr-xr-x 4 jhunt staff 128 Mar 23 18:15 theme</code></pre>
+  </div>
+</div>
+<div class="band [% l %]">
+  <div>
+     <h1>Lorem Ipsum Dolor Sit Amet</h1>
+
+     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+     eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+     minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+     ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+     voluptate.</p>
+  </div>
+  <div class="mt"></div>
+</div>
+[% end %]

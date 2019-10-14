@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf8">
+<meta name="viewport" content="width=device-width,initial-scale=1,target-densitydpi=device-dpi" />
+<meta name="generator" content="verse" />
+
+[% if dometa -%]
+  <meta name="twitter:card"       content="summary">
+[% if site.id.twitter -%]
+  <meta name="twitter:site"       content="@[% site.id.twitter %]">
+[% end %]
+
+<meta property="og:type"        content="article">
+<meta property="og:title"       content="[% article.attrs.title %]">
+<meta property="og:site_name"   content="[% site.title %]">
+<meta property="og:url"         content="[% site.canon %]/blog/[% article.attrs.permalink %].html">
+
+[% if article.attrs.thumb -%]
+  <meta property="og:image"       content="[% site.canon %]/content/wrt/stack.jpg">
+[% end -%]
+<meta property="og:description" content="[% filter collapse %]
+  [% if article.attrs.abstract %]
+    [% article.attrs.abstract %]
+  [% else %]
+    Packed full of infrastructural insight... and swears.
+  [% end %]
+[% end %]">
+[% if site.id.facebook -%]
+  <meta property="article:author" content="[% site.id.facebook %]">
+[% end -%]
+
+<title>[% article.attrs.title %] - [% site.title %]</title>
+
+[% else -%]
+<title>[% site.title %]</title>
+
+[% end %]
+<link rel="stylesheet" href="/style.css">
+<link rel="alternate home" type="application/rss+xml" title="[% site.title %] - RSS feed" href="[% site.url %]/feed.xml">
+</head>
+<body>
+  <header>
+    <nav>
+      <li><a href="#">discover</a></li>
+      <li><a href="#">reference</a></li>
+      <li><a href="#">blog</a></li>
+      <li><a href="#">donate</a></li>
+    </nav>
+  </header>
+
+  <main>
+    [% content %]
+
+    <div class="band b footer">
+      <div>
+        <p>Powered by <a href="https://verse.jameshunt.us" target="_blank">Verse</a>
+      </div>
+      <div class="mt"></div>
+    </div>
+  </main>
+
+</body>
+</html>

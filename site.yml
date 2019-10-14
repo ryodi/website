@@ -1,0 +1,10 @@
+site:
+  title:    ryodi
+  subtitle: Run Your Own @#$% Infrastructure
+  author:   James Hunt
+
+  canon:    https://ryodi.com
+  theme:    ryodi
+
+  id:
+    twitter: iamjameshunt

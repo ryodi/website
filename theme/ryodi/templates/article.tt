@@ -1,0 +1,4 @@
+[% dometa = 'yes' %]
+<h2>[% article.attrs.title %]</h2>
+<p>[% article.attrs.dated %]</p>
+[% article.attrs.body %]
