@@ -6,37 +6,33 @@
 <meta name="generator" content="verse" />
 
 [% if dometa -%]
-  <meta name="twitter:card"       content="summary">
+<meta name="twitter:card"       content="summary">
 [% if site.id.twitter -%]
-  <meta name="twitter:site"       content="@[% site.id.twitter %]">
+<meta name="twitter:site"       content="@[% site.id.twitter %]">
 [% end %]
 
 <meta property="og:type"        content="article">
-[% if article -%]
-<meta property="og:title"       content="[% article.attrs.title %]">
 <meta property="og:site_name"   content="[% site.title %]">
-<meta property="og:url"         content="[% site.canon %]/blog/[% article.attrs.permalink %]">
-
-[% if article.attrs.image -%]
-  <meta property="og:image"       content="[% site.canon %][% article.attrs.image %]">
-[% else -%]
-  <meta property="og:image"       content="[% site.canon %]/i/og.png">
-[% end -%]
+[% if meta.og.title -%]
+<meta property="og:title"       content="[% meta.og.title %]">
 [% else -%]
 <meta property="og:title"       content="[% site.title %]">
-<meta property="og:site_name"   content="[% site.title %]">
-<meta property="og:url"         content="[% site.canon %]">
-<meta property="og:image"       content="[% site.canon %]/i/header.png">
 [% end -%]
-<meta property="og:description" content="[% filter collapse %]
-  [% if article.attrs.abstract %]
-    [% article.attrs.abstract %]
-  [% else %]
-    Packed full of infrastructural insight... and swears.
-  [% end %]
-[% end %]">
-[% if site.id.facebook -%]
-  <meta property="article:author" content="[% site.id.facebook %]">
+
+[% if meta.og.url -%]
+<meta property="og:url"         content="[% site.canon %][% meta.og.url %]">
+[% else -%]
+<meta property="og:url"         content="[% site.canon %]">
+[% end -%]
+
+[% if meta.og.image -%]
+<meta property="og:image"       content="[% site.canon %][% meta.og.image %]">
+[% else -%]
+<meta property="og:image"       content="[% site.canon %]/i/og.png">
+[% end -%]
+
+[% if meta.og.description -%]
+<meta property="og:description" content="[% filter collapse %][% meta.og.description %][% end %]">
 [% end -%]
 
 <title>[% article.attrs.title %] - [% site.title %]</title>

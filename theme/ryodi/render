@@ -22,6 +22,7 @@ my @all = reverse
 	sort { ($a->{__dated} || 0) cmp ($b->{__dated} || 0) }
 	grep { !$_->attrs->{draft} } blog->read_all;
 $_->{timestamp} = $_->{__dated} || 0 for @all;
+$_->attrs->{url} = "/blog/".$_->attrs->{permalink} for @all;
 
 my @featured   = grep { $_->attrs->{featured} and !$_->attrs->{private} } @all;
 my @syndicated = grep { !$_->attrs->{private}                           } @all;

@@ -93,6 +93,7 @@ body main .page .header h1 {
   font-size: 72px;
   text-align: center;
 }
+body main .page .header h1.image { padding: 36px; }
 body main .page .header h1.d { background-color: #ec008c; color: #fff; }
 body main .page .header h1.a { background-color: #fbe408; color: #000; }
 body main .page .header h1.m { background-color: #64bc47; color: #fff; }
@@ -128,6 +129,7 @@ body main h1 span:nth-of-type(1) {
   margin-top: 1em;
 }
 body main p { line-height: 1.25em; margin: 2em 0; }
+body main p a { text-decoration: none; border-bottom-width: 1px; border-bottom-style: dotted; color: inherit; }
 body main .band > div { box-sizing: border-box; padding: 2em; }
 body main .band img { max-width: 100%; display: block; margin: 0 auto; }
 
@@ -138,6 +140,11 @@ body main .band.a > div { background-color: #fbe408; }
 body main .band.m > div { background-color: #64bc47; }
 body main .band.n > div { background-color: #25aae1; }
 body main .band.w > div { background-color: #fff; }
+body main .band > div a { color: #fff; }
+body main .band.w.d > div a { color: #ec008c; }
+body main .band.w.a > div a { color: #fbe408; }
+body main .band.w.m > div a { color: #64bc47; }
+body main .band.w.n > div a { color: #25aae1; }
 body main .band > div.mt { background-color: transparent; }
 
 body main .band > div:nth-child(2) { padding: 5vw; }
@@ -195,6 +202,8 @@ body {
   background-attachment: fixed;
 }
 
+body main .band > div:nth-child(2) a { color: #fff !important; }
+
 @media only screen and (max-width: 799px) {
   body main > .sp { background: linear-gradient(180deg, #000, 1px, transparent), linear-gradient(0deg, #000, 1px, transparent); }
   body main > .sp.sp1 { height: 10vh; }
@@ -213,7 +222,7 @@ body {
     flex-direction: row;
   }
 
-  body main .band > div:nth-child(1) { width: 40vw; }
+  body main .band > div:nth-child(1) { width: 40vw; flex-shrink: 0; }
   body main .band > div:nth-child(2) { width: 60vw; }
   body main .band.d > div:nth-child(2) { background: linear-gradient(90deg, #000, 1px, #ec008c); }
   body main .band.a > div:nth-child(2) { background: linear-gradient(90deg, #000, 1px, #fbe408); }

@@ -1,3 +1,8 @@
+[% dometa        = "yes"             -%]
+[% meta.og.title = "The RYODI Blog"  -%]
+[% meta.og.url   = "/blog"           -%]
+[% meta.og.description = "Packed full of infrastructural insight... and swearing." -%]
+
 <div class="band b header">
   <div><img class="logo" src="/i/logo.png"></div>
   <div><img class="header" src="/i/header.png"></div>
@@ -13,7 +18,7 @@
 
      [% article.attrs.teaser %]
 
-     <p><a href="/blog/[% article.attrs.permalink %]">Read it</a></p>
+     <p><a href="[% article.attrs.url %]">Read it</a></p>
   </div>
 
   [% if article.attrs.image %]

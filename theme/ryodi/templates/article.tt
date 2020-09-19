@@ -1,8 +1,13 @@
-[% dometa = 'yes' %]
+[% dometa        = "yes"                -%]
+[% meta.og.title = article.attrs.title  -%]
+[% meta.og.url   = article.attrs.url    -%]
+[% meta.og.image = article.attrs.image  -%]
 <div class="page">
   <div class="header">
     <div class="logo"><a href="/"><img src="/i/logo.png"></a></div>
-    <h1 class="[% article.attrs.class %]">[% article.attrs.title %]
+    [% if article.attrs.image %]<div class="bg" style="background-image: url([% article.attrs.image %]); height: 50vh; background-size: cover;"></div>
+    [%- end -%]
+    <h1 class="[% if article.attrs.image %]image [% end %][% article.attrs.class %]">[% article.attrs.title %]
       <span>[% article.attrs.dated %]</span>
       <span>[% article.attrs.author %]</span></h1>
   </div>
