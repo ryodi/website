@@ -1,0 +1,36 @@
+<div class="page">
+  <div class="header">
+    <div class="logo"><img src="/i/logo.png"></div>
+    <h1 class="[% class %]">The RYODI Blog
+        <span>All The Know-How To Own Your Own Personal Digital Infrastructure</span></h1>
+  </div>
+</div>
+
+<div class="sp sp3"></div>
+<div class="band w">
+  <div>
+     <p></p>
+  </div>
+  <div class="mt"></div>
+</div>
+[% for article in articles %]
+<div class="band [% if article.attrs.image %]w [% end %][% article.attrs.class %]">
+  <div>
+     <h1>[% article.attrs.title %]
+       <span>[% article.attrs.dated %]</span>
+       <span>[% article.attrs.author %]</span></h1>
+
+     [% article.attrs.teaser %]
+
+     <p><a href="/blog/[% article.attrs.permalink %]">Read it</a></p>
+  </div>
+
+  [% if article.attrs.image %]
+  <div>
+    <img src="[% article.attrs.image %]">
+  </div>
+  [% else %]
+  <div class="mt"></div>
+  [% end %]
+</div>
+[% end %]

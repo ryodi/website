@@ -16,7 +16,7 @@
     <nav>
       <li><a href="#">discover</a></li>
       <li><a href="#">reference</a></li>
-      <li><a href="#">blog</a></li>
+      <li><a href="/blog">blog</a></li>
       <li><a href="#">donate</a></li>
     </nav>
   </header>

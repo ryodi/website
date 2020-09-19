@@ -41,7 +41,14 @@ dir "{site}/blog";
 for my $post (@all) {
 	render $post,
 		using => "article.tt",
-		at    => "{site}/blog/{permalink}.html";
+		at    => "{site}/blog/{permalink}/index.html";
+}
+render { class => pick(qw(d m n)), articles => [@all] },
+	using => "blog.tt",
+	at    => "{site}/blog/index.html";
+
+sub pick {
+	return $_[int(rand(@_))];
 }
 
 1;

@@ -14,7 +14,7 @@
 <meta property="og:type"        content="article">
 <meta property="og:title"       content="[% article.attrs.title %]">
 <meta property="og:site_name"   content="[% site.title %]">
-<meta property="og:url"         content="[% site.canon %]/blog/[% article.attrs.permalink %].html">
+<meta property="og:url"         content="[% site.canon %]/blog/[% article.attrs.permalink %]">
 
 [% if article.attrs.thumb -%]
   <meta property="og:image"       content="[% site.canon %]/content/wrt/stack.jpg">
@@ -44,7 +44,7 @@
     <nav>
       <li><a href="#">discover</a></li>
       <li><a href="#">reference</a></li>
-      <li><a href="#">blog</a></li>
+      <li><a href="/blog">blog</a></li>
       <li><a href="#">donate</a></li>
     </nav>
   </header>

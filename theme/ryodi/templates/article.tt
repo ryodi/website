@@ -1,4 +1,13 @@
 [% dometa = 'yes' %]
-<h2>[% article.attrs.title %]</h2>
-<p>[% article.attrs.dated %]</p>
-[% article.attrs.body %]
+<div class="page">
+  <div class="header">
+    <div class="logo"> <img src="/i/logo.png"></div>
+    <h1 class="[% article.attrs.class %]">[% article.attrs.title %]
+      <span>[% article.attrs.dated %]</span>
+      <span>[% article.attrs.author %]</span></h1>
+  </div>
+  <div class="body"><div>
+    [% article.attrs.body %]
+  </div></div>
+</div>
+

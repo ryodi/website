@@ -76,6 +76,45 @@ drwxr-xr-x 8 jhunt staff 256 Aug 17 19:52 htdocs
 drwxr-xr-x 4 jhunt staff 128 Mar 23 18:15 theme</code></pre>
   </div>
 </div>
+<div class="band [% l %] x">
+  <div>
+     <h1>Lorem Ipsum Dolor Sit Amet</h1>
+
+     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+     eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+     minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+     ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+     voluptate.</p>
+  </div>
+
+  <div>
+    <blockquote>
+      If you want to make the world a better place,<br>
+      Take a look at yourself and make a change.</br>
+      Hooo<br>
+      <cite>Batman</cite>
+    </blockquote>
+  </div>
+</div>
+<div class="band [% l %] x">
+  <div>
+     <h1>Lorem Ipsum Dolor Sit Amet</h1>
+
+     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+     eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+     minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+     ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+     voluptate.</p>
+  </div>
+
+  <div>
+     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+     eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+     minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+     ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+     voluptate.</p>
+  </div>
+</div>
 <div class="band [% l %]">
   <div>
      <h1>Lorem Ipsum Dolor Sit Amet</h1>
