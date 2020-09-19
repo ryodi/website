@@ -35,7 +35,7 @@ render { articles => [@syndicated], latest => $latest },
 my $styles = [map { ($_, "w $_") } split //, 'damn'];
 render { x => $styles, articles => [@featured] },
 	using => "main.tt",
-	at    => "{site}/index.html";
+	at    => "{site}/l/o/r/e/m/index.html";
 
 dir "{site}/blog";
 for my $post (@all) {
@@ -43,12 +43,12 @@ for my $post (@all) {
 		using => "article.tt",
 		at    => "{site}/blog/{permalink}/index.html";
 }
-render { class => pick(qw(d m n)), articles => [@all] },
+render { articles => [@all] },
 	using => "blog.tt",
 	at    => "{site}/blog/index.html";
 
-sub pick {
-	return $_[int(rand(@_))];
-}
+render { articles => [@all], dometa => 1 },
+	using => "blog.tt",
+	at    => "{site}/index.html";
 
 1;

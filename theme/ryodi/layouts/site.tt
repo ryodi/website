@@ -12,12 +12,21 @@
 [% end %]
 
 <meta property="og:type"        content="article">
+[% if article -%]
 <meta property="og:title"       content="[% article.attrs.title %]">
 <meta property="og:site_name"   content="[% site.title %]">
 <meta property="og:url"         content="[% site.canon %]/blog/[% article.attrs.permalink %]">
 
-[% if article.attrs.thumb -%]
-  <meta property="og:image"       content="[% site.canon %]/content/wrt/stack.jpg">
+[% if article.attrs.image -%]
+  <meta property="og:image"       content="[% site.canon %][% article.attrs.image %]">
+[% else -%]
+  <meta property="og:image"       content="[% site.canon %]/i/og.png">
+[% end -%]
+[% else -%]
+<meta property="og:title"       content="[% site.title %]">
+<meta property="og:site_name"   content="[% site.title %]">
+<meta property="og:url"         content="[% site.canon %]">
+<meta property="og:image"       content="[% site.canon %]/i/header.png">
 [% end -%]
 <meta property="og:description" content="[% filter collapse %]
   [% if article.attrs.abstract %]
@@ -42,10 +51,10 @@
 <body>
   <header>
     <nav>
-      <li><a href="#">discover</a></li>
-      <li><a href="#">reference</a></li>
+      <!--li><a href="#">discover</a></li>
+      <li><a href="#">reference</a></li-->
       <li><a href="/blog">blog</a></li>
-      <li><a href="#">donate</a></li>
+      <!--li><a href="#">donate</a></li-->
     </nav>
   </header>
 

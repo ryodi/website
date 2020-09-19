@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>ryodi</title>
-  <link href="https://ryodi.com/rss.xml" rel="self" />
-  <link href="https://ryodi.com" />
+  <link href="http://127.0.0.1:4000/rss.xml" rel="self" />
+  <link href="http://127.0.0.1:4000" />
 
-  <updated>2020-09-20T00:00:00</updated>
-  <id>https://ryodi.com</id>
+  <updated>2020-09-19T00:00:00</updated>
+  <id>http://127.0.0.1:4000</id>
   <author><name>James Hunt</name></author>
   <generator uri="http://verse.jameshunt.us/">Verse</generator>
 
   
   <entry>
-    <title><![CDATA[Owning Your Data: A Radical Idea Part II]]></title>
-    <link href="//owning-your-data--a-crazy-idea-part-2.html?rss" />
-    <id>/writings/owning-your-data--a-crazy-idea-part-2.html</id>
-    <updated>2020-09-20T00:00:00</updated>
+    <title><![CDATA[Owning Your Data: A Radical Idea]]></title>
+    <link href="//owning-your-data--a-crazy-idea.html?rss" />
+    <id>/writings/owning-your-data--a-crazy-idea.html</id>
+    <updated>2020-09-19T00:00:00</updated>
     <content type="html"><![CDATA[<p>I run my own email server.</p>
 
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -49,10 +49,10 @@ voluptate.</p>]]></content>
   </entry>
 
   <entry>
-    <title><![CDATA[Owning Your Data: A Radical Idea]]></title>
-    <link href="//owning-your-data--a-crazy-idea.html?rss" />
-    <id>/writings/owning-your-data--a-crazy-idea.html</id>
-    <updated>2020-09-19T00:00:00</updated>
+    <title><![CDATA[Owning Your Data: A Radical Idea Part II]]></title>
+    <link href="//owning-your-data--a-crazy-idea-part-2.html?rss" />
+    <id>/writings/owning-your-data--a-crazy-idea-part-2.html</id>
+    <updated>2020-09-15T00:00:00</updated>
     <content type="html"><![CDATA[<p>I run my own email server.</p>
 
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
