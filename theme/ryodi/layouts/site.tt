@@ -54,7 +54,8 @@
 
     <div class="band b footer">
       <div>
-        <p>Powered by <a href="https://verse.jameshunt.us" target="_blank">Verse</a>
+        <p>Copyright &copy; 2020 <a href="https://huntprod.com" target="_blank">Hunt Productions, Inc.</a></p>
+          <p>Powered by <a href="https://verse.jameshunt.us" target="_blank">Verse</a></p>
       </div>
       <div class="mt"></div>
     </div>
